@@ -1,0 +1,32 @@
+QDOC = $$[QT_INSTALL_BINS]/qdoc
+QHELPGENERATOR = $$[QT_INSTALL_BINS]/qhelpgenerator
+
+isEmpty(MER_QDOC.style):MER_QDOC.style=offline
+isEmpty(MER_QDOC.template):MER_QDOC.template=$$[QT_INSTALL_DOCS]/mer-qdoc-template
+
+QDOCCONF = $${MER_QDOC.template}/$${MER_QDOC.style}.qdocconf
+QHELPFILE = html/$${MER_QDOC.project}.qhp
+QCHFILE = $${MER_QDOC.project}.qch
+
+ENV += \
+    QT_VERSION=$${QT_MAJOR_VERSION}.$${QT_MINOR_VERSION} \
+    PROJECT_CONFIG=$${_PRO_FILE_PWD_}/$${MER_QDOC.config} \
+    BUILD_DIRECTORY=$${OUT_PWD} \
+    TEMPLATE=$${MER_QDOC.template}
+
+qch_docs.target = $${QCHFILE}
+qch_docs.depends += FORCE
+qch_docs.commands = (env $$ENV $$QDOC $$QDOCCONF) && \
+                    ($${QHELPGENERATOR} $${QHELPFILE} -o $${QCHFILE})
+
+generate_docs.target = docs
+generate_docs.depends = $${QCHFILE}
+
+docs.depends = $${QCHFILE}
+docs.path = $${MER_QDOC.path}
+docs.commands = $$QMAKE_INSTALL_FILE $${QCHFILE} $(INSTALL_ROOT)$${docs.path}
+
+QMAKE_EXTRA_TARGETS += qch_docs generate_docs
+INSTALLS += docs
+
+OTHER_FILES += $${MER_QDOC.config}

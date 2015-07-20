@@ -1,0 +1,4 @@
+outputdir = $BUILD_DIRECTORY/html
+base = file:../html
+
+include(fileextensions.qdocconf)

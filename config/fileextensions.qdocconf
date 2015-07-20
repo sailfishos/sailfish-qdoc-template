@@ -1,0 +1,9 @@
+sourceencoding  = UTF-8
+outputencoding  = UTF-8
+naturallanguage = en_US
+
+sources.fileextensions = "*.cpp *.qdoc *.mm *.qml"
+headers.fileextensions  = "*.ch *.h *.h++ *.hh *.hpp *.hxx"
+
+examples.fileextensions = "*.cpp *.h *.js *.xq *.svg *.xml *.ui *.qhp *.qhcp *.qml"
+examples.imageextensions = "*.png *.jpeg *.jpg *.gif *.mng"
