@@ -41,6 +41,8 @@ make install_docs INSTALL_ROOT=%{buildroot}
 %{_datadir}/doc/qt5/%{name}/offline.qdocconf
 %{_datadir}/doc/qt5/%{name}/common.qdocconf
 %{_datadir}/doc/qt5/%{name}/fileextensions.qdocconf
+%{_datadir}/doc/qt5/%{name}/qt-cpp-ignore.qdocconf
+%{_datadir}/doc/qt5/%{name}/qt-defines.qdocconf
 %{_datadir}/doc/qt5/%{name}/mer-html-default-styles.qdocconf
 %{_datadir}/doc/qt5/%{name}/mer-html-templates.qdocconf
 %{_datadir}/doc/qt5/%{name}/images/breadcrumb.png
