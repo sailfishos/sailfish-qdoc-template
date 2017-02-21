@@ -270,7 +270,7 @@
         margin-left: 1.5em;
     }
 
-    .header .breadcrumb ul li:last-child
+    .header .breadcrumb ul li:last-child:not(:only-child)
     {
         visibility: hidden;
     }
