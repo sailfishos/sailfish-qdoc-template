@@ -36,21 +36,21 @@ make install_docs INSTALL_ROOT=%{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%dir %{_datadir}/doc/qt5/%{name}
+%dir %{_datadir}/%{name}
 %{_datadir}/qt5/mkspecs/features/mer-qdoc-template.prf
-%{_datadir}/doc/qt5/%{name}/offline.qdocconf
-%{_datadir}/doc/qt5/%{name}/common.qdocconf
-%{_datadir}/doc/qt5/%{name}/fileextensions.qdocconf
-%{_datadir}/doc/qt5/%{name}/qt-cpp-ignore.qdocconf
-%{_datadir}/doc/qt5/%{name}/qt-defines.qdocconf
-%{_datadir}/doc/qt5/%{name}/mer-html-default-styles.qdocconf
-%{_datadir}/doc/qt5/%{name}/mer-html-templates.qdocconf
-%{_datadir}/doc/qt5/%{name}/images/breadcrumb.png
-%{_datadir}/doc/qt5/%{name}/images/bullet_dn.png
-%{_datadir}/doc/qt5/%{name}/images/bullet_gt.png
-%{_datadir}/doc/qt5/%{name}/images/bullet_sq.png
-%{_datadir}/doc/qt5/%{name}/images/bullet_up.png
-%{_datadir}/doc/qt5/%{name}/style/offline.css
+%{_datadir}/%{name}/offline.qdocconf
+%{_datadir}/%{name}/common.qdocconf
+%{_datadir}/%{name}/fileextensions.qdocconf
+%{_datadir}/%{name}/qt-cpp-ignore.qdocconf
+%{_datadir}/%{name}/qt-defines.qdocconf
+%{_datadir}/%{name}/mer-html-default-styles.qdocconf
+%{_datadir}/%{name}/mer-html-templates.qdocconf
+%{_datadir}/%{name}/images/breadcrumb.png
+%{_datadir}/%{name}/images/bullet_dn.png
+%{_datadir}/%{name}/images/bullet_gt.png
+%{_datadir}/%{name}/images/bullet_sq.png
+%{_datadir}/%{name}/images/bullet_up.png
+%{_datadir}/%{name}/style/offline.css
 
 %files doc
 %defattr(-,root,root,-)

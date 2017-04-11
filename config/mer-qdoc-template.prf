@@ -1,8 +1,10 @@
 QDOC = $$[QT_INSTALL_BINS]/qdoc
 QHELPGENERATOR = $$[QT_INSTALL_BINS]/qhelpgenerator
 
+# Note: not $${QT_INSTALL_DOCS}/mer-qdoc-template
+# because the SDK prevents installation to /usr/share/doc/
+isEmpty(MER_QDOC.template):MER_QDOC.template=/usr/share/mer-qdoc-template
 isEmpty(MER_QDOC.style):MER_QDOC.style=offline
-isEmpty(MER_QDOC.template):MER_QDOC.template=$$[QT_INSTALL_DOCS]/mer-qdoc-template
 
 QDOCCONF = $${MER_QDOC.template}/$${MER_QDOC.style}.qdocconf
 QHELPFILE = html/$${MER_QDOC.project}.qhp
