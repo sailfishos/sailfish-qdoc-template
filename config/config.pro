@@ -1,5 +1,9 @@
 TEMPLATE = aux
 
+# note: not $$[QT_INSTALL_DOCS]/mer-qdoc-template
+# since the sdk prevents installing to /usr/share/doc
+DOC_INSTALL_PATH = /usr/share/mer-qdoc-template
+
 config.files = \
     offline.qdocconf \
     common.qdocconf \
@@ -8,7 +12,7 @@ config.files = \
     qt-defines.qdocconf \
     mer-html-templates.qdocconf \
     mer-html-default-styles.qdocconf
-config.path = $$[QT_INSTALL_DOCS]/mer-qdoc-template
+config.path = $$DOC_INSTALL_PATH
 
 images.files = \
     images/breadcrumb.png \
@@ -16,11 +20,11 @@ images.files = \
     images/bullet_gt.png \
     images/bullet_sq.png \
     images/bullet_up.png
-images.path = $$[QT_INSTALL_DOCS]/mer-qdoc-template/images
+images.path = $$DOC_INSTALL_PATH/images
 
 styles.files = \
     style/offline.css
-styles.path = $$[QT_INSTALL_DOCS]/mer-qdoc-template/style
+styles.path = $$DOC_INSTALL_PATH/style
 
 feature.files = mer-qdoc-template.prf
 feature.path = $$[QT_INSTALL_DATA]/mkspecs/features
