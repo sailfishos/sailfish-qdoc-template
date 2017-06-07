@@ -87,7 +87,9 @@ Cpp.ignoredirectives    = Q_DECLARE_HANDLE \
                           Q_DISABLE_COPY \
                           QT_FORWARD_DECLARE_CLASS \
                           Q_DUMMY_COMPARISON_OPERATOR \
+                          Q_ENUM \
                           Q_ENUMS \
+                          Q_FLAG \
                           Q_FLAGS \
                           Q_INTERFACES \
                           __attribute__ \
