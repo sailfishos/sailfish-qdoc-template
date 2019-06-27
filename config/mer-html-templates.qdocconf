@@ -27,3 +27,5 @@ qhp.extraFiles = \
     images/bullet_sq.png \
     images/bullet_up.png \
     style/offline.css
+
+codeindent              = 1

@@ -8,8 +8,7 @@ config.files = \
     offline.qdocconf \
     common.qdocconf \
     fileextensions.qdocconf \
-    qt-cpp-ignore.qdocconf \
-    qt-defines.qdocconf \
+    qt-cpp-defines.qdocconf \
     mer-html-templates.qdocconf \
     mer-html-default-styles.qdocconf
 config.path = $$DOC_INSTALL_PATH
