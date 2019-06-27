@@ -162,6 +162,10 @@ Cpp.ignoredirectives    += \
                           Q_ATTRIBUTE_FORMAT_PRINTF \
                           Q_MV_IOS
 
+# Manually added in addition to what was found in Qt Base 5.6 - think before removing these
+Cpp.ignoredirectives    += \
+                          Q_DECLARE_LOGGING_CATEGORY
+
 # Qt 6: Remove
 falsehoods              += \
                           "QT_VERSION >= QT_VERSION_CHECK\\(6,0,0\\)"
