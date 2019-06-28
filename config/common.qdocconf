@@ -2,5 +2,4 @@ outputdir = $BUILD_DIRECTORY/html
 base = file:../html
 
 include(fileextensions.qdocconf)
-include(qt-defines.qdocconf)
-include(qt-cpp-ignore.qdocconf)
+include(qt-cpp-defines.qdocconf)

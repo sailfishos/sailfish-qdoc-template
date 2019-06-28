@@ -41,8 +41,7 @@ make install_docs INSTALL_ROOT=%{buildroot}
 %{_datadir}/%{name}/offline.qdocconf
 %{_datadir}/%{name}/common.qdocconf
 %{_datadir}/%{name}/fileextensions.qdocconf
-%{_datadir}/%{name}/qt-cpp-ignore.qdocconf
-%{_datadir}/%{name}/qt-defines.qdocconf
+%{_datadir}/%{name}/qt-cpp-defines.qdocconf
 %{_datadir}/%{name}/mer-html-default-styles.qdocconf
 %{_datadir}/%{name}/mer-html-templates.qdocconf
 %{_datadir}/%{name}/images/breadcrumb.png
