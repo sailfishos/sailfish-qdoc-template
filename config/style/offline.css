@@ -30,10 +30,12 @@
     {
         list-style: decimal;
     }
+/* QTextBrowser
     ul li
     {
         list-style: none;
     }
+*/
     caption, th
     {
         text-align: left;
@@ -265,27 +267,33 @@
     .header .breadcrumb ul li
     {
         float: left;
+/* QTextBrowser
         background: url(../images/breadcrumb.png) no-repeat 0 3px;
         padding-left: 1.5em;
+*/
         margin-left: 1.5em;
     }
 
+/* QTextBrowser
     .header .breadcrumb ul li:last-child:not(:only-child)
     {
         visibility: hidden;
     }
+*/
 
     .header .breadcrumb ul li a
     {
         color: #735704;
     }
 
+/* QTextBrowser
     .header .breadcrumb ul li:first-child
     {
         background-image: none;
         padding-left: 0;
         margin-left: 0;
     }
+*/
 
     .header .content ol li {
         background: none;
@@ -296,7 +304,9 @@
 
     .header .content li
     {
+/* QTextBrowser
         background: url(../images/bullet_sq.png) no-repeat 0 5px;
+*/
         margin-bottom: 1em;
         padding-left: 1.2em;
     }
@@ -332,8 +342,8 @@
     }
     .content li
     {
-        padding-top: 0.25em;
-        padding-bottom: 0.25em;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
     }
     .content ul img {
         vertical-align: middle;
@@ -501,13 +511,17 @@
 
     .content ul li
     {
+/* QTextBrowser
         background: url(../images/bullet_sq.png) no-repeat 0 0.7em;
+*/
         padding-left: 1em
     }
 
     .content .toc li
     {
+/* QTextBrowser
         background: url(../images/bullet_dn.png) no-repeat 0 5px;
+*/
         padding-left: 1em
     }
 
