@@ -116,6 +116,10 @@
         border-collapse: separate;
         margin-bottom: 2.5em;
     }
+    table.qmlname
+    {
+        margin-bottom: 0;
+    }
     pre {
         font-size: 90%;
         display: block;
