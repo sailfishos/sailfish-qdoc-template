@@ -318,6 +318,11 @@
 /* end header elements */
 
 /* content elements */
+    .content .naviNextPrevious
+    {
+        display: none;
+    }
+
     .content h1
     {
         font-weight: bold;
