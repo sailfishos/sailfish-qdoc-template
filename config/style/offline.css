@@ -30,10 +30,12 @@
     {
         list-style: decimal;
     }
+/* QTextBrowser
     ul li
     {
         list-style: none;
     }
+*/
     caption, th
     {
         text-align: left;
@@ -114,10 +116,14 @@
         border-collapse: separate;
         margin-bottom: 2.5em;
     }
+    table.qmlname
+    {
+        margin-bottom: 0;
+    }
     pre {
         font-size: 90%;
         display: block;
-        overflow:hidden;
+        overflow: auto;
     }
     thead
     {
@@ -265,27 +271,33 @@
     .header .breadcrumb ul li
     {
         float: left;
+/* QTextBrowser
         background: url(../images/breadcrumb.png) no-repeat 0 3px;
         padding-left: 1.5em;
+*/
         margin-left: 1.5em;
     }
 
+/* QTextBrowser
     .header .breadcrumb ul li:last-child:not(:only-child)
     {
         visibility: hidden;
     }
+*/
 
     .header .breadcrumb ul li a
     {
         color: #735704;
     }
 
+/* QTextBrowser
     .header .breadcrumb ul li:first-child
     {
         background-image: none;
         padding-left: 0;
         margin-left: 0;
     }
+*/
 
     .header .content ol li {
         background: none;
@@ -296,7 +308,9 @@
 
     .header .content li
     {
+/* QTextBrowser
         background: url(../images/bullet_sq.png) no-repeat 0 5px;
+*/
         margin-bottom: 1em;
         padding-left: 1.2em;
     }
@@ -304,6 +318,11 @@
 /* end header elements */
 
 /* content elements */
+    .content .naviNextPrevious
+    {
+        display: none;
+    }
+
     .content h1
     {
         font-weight: bold;
@@ -315,12 +334,16 @@
         font-weight: bold;
         font-size: 120%;
         width: 100%;
+        margin-top: 2em;
+        margin-bottom: 1em;
     }
     .content h3
     {
         font-weight: bold;
         font-size: 110%;
         width: 100%;
+        margin-top: 2em;
+        margin-bottom: 1em;
     }
     .content table p
     {
@@ -332,8 +355,8 @@
     }
     .content li
     {
-        padding-top: 0.25em;
-        padding-bottom: 0.25em;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
     }
     .content ul img {
         vertical-align: middle;
@@ -501,13 +524,17 @@
 
     .content ul li
     {
+/* QTextBrowser
         background: url(../images/bullet_sq.png) no-repeat 0 0.7em;
+*/
         padding-left: 1em
     }
 
     .content .toc li
     {
+/* QTextBrowser
         background: url(../images/bullet_dn.png) no-repeat 0 5px;
+*/
         padding-left: 1em
     }
 
