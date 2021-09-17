@@ -11,6 +11,7 @@ config.files = \
     qt-cpp-defines.qdocconf \
     sailfish-html-templates.qdocconf \
     sailfish-html-default-styles.qdocconf
+
 config.path = $$DOC_INSTALL_PATH
 
 images.files = \
@@ -19,10 +20,12 @@ images.files = \
     images/bullet_gt.png \
     images/bullet_sq.png \
     images/bullet_up.png
+
 images.path = $$DOC_INSTALL_PATH/images
 
 styles.files = \
     style/offline.css
+
 styles.path = $$DOC_INSTALL_PATH/style
 
 feature.files = sailfish-qdoc-template.prf

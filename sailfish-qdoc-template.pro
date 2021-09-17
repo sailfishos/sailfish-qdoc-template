@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
-SUBDIRS +=  config doc
+SUBDIRS += config doc
 
 config.CONFIG += no_docs_target no_install_docs_target
 

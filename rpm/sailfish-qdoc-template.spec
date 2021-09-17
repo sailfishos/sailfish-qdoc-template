@@ -1,10 +1,9 @@
 Name:       sailfish-qdoc-template
 Summary:    Sailfish Documentation QDoc templates
-Version:    0.0.0
+Version:    0.1.0
 Release:    1
-Group:      System/Libraries
 License:    LGPLv2.1
-URL:        https://github.com/
+URL:        https://github.com/sailfishos/sailfish-qdoc-template
 Source0:    %{name}-%{version}.tar.bz2
 BuildRequires:  qt5-qmake
 BuildRequires:  qt5-tools
@@ -16,7 +15,6 @@ Requires:       qt5-qttools-qthelp-devel >= 5.2.0+git1
 
 %package doc
 Summary:    Sailfish Documentation QDoc templates documentation
-Group:      System/Libraries
 
 %description doc
 %{summary}.
