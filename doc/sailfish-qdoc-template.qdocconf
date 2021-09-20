@@ -1,20 +1,20 @@
-project         = Mer QDoc Documentation Template
-description     = Mer QDoc Documentation Template Reference Documentation
+project         = Sailfish QDoc Documentation Template
+description     = Sailfish QDoc Documentation Template Reference Documentation
 versionsym      =
 version         = 1.0
 url             =
 
 sourcedirs += .
 
-qhp.projects = MerQDocTemplate
+qhp.projects = SailfishQDocTemplate
 
-qhp.MerQDocTemplate.file = mer-qdoc-template.qhp
-qhp.MerQDocTemplate.namespace = org.mer-project.qdoc-template.1.0
-qhp.MerQDocTemplate.virtualFolder = mer-qdoc-template
-qhp.MerQDocTemplate.indexTitle = Mer QDoc Documentation Template
-qhp.MerQDocTemplate.indexRoot =
+qhp.SailfishQDocTemplate.file = sailfish-qdoc-template.qhp
+qhp.SailfishQDocTemplate.namespace = org.sailfish-project.qdoc-template.1.0
+qhp.SailfishQDocTemplate.virtualFolder = sailfish-qdoc-template
+qhp.SailfishQDocTemplate.indexTitle = Sailfish QDoc Documentation Template
+qhp.SailfishQDocTemplate.indexRoot =
 
-qhp.MerQDocTemplate.filterAttributes = mer-qdoc-template 1.0
+qhp.SailfishQDocTemplate.filterAttributes = sailfish-qdoc-template 1.0
 
 HTML.footer += \
     "<div class=\"footer\">\n" \

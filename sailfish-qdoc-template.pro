@@ -8,4 +8,4 @@ prepareRecursiveTarget(install_docs)
 QMAKE_EXTRA_TARGETS += docs install_docs
 
 OTHER_FILES += \
-    rpm/mer-qdoc-template.spec
+    rpm/sailfish-qdoc-template.spec
