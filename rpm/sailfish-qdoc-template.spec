@@ -24,13 +24,11 @@ Summary:    Sailfish Documentation QDoc templates documentation
 
 %build
 %qmake5
-make %{?jobs:-j%jobs}
-make docs %{?jobs:-j%jobs}
+%make_build
 
 %install
 rm -rf %{buildroot}
 %qmake5_install
-make install_docs INSTALL_ROOT=%{buildroot}
 
 %files
 %defattr(-,root,root,-)

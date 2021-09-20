@@ -16,19 +16,19 @@ ENV += \
     BUILD_DIRECTORY=$${OUT_PWD} \
     TEMPLATE=$${SAILFISH_QDOC.template}
 
-qch_docs.target = $${QCHFILE}
-qch_docs.depends += FORCE
-qch_docs.commands = (env $$ENV $$QDOC $$QDOCCONF) && \
-                    ($${QHELPGENERATOR} $${QHELPFILE} -o $${QCHFILE})
+docs.input = ..
+docs.output = $${QCHFILE}
+docs.commands = (env $$ENV $$QDOC $$QDOCCONF) && \
+                ($${QHELPGENERATOR} $${QHELPFILE} -o $${QCHFILE})
+docs.CONFIG += no_check_exist no_default_install
 
-generate_docs.target = docs
-generate_docs.depends = $${QCHFILE}
+docs_install.files = $${QCHFILE}
+docs_install.path = $${SAILFISH_QDOC.path}
+docs_install.CONFIG += no_check_exist no_build
 
-docs.depends = $${QCHFILE}
-docs.path = $${SAILFISH_QDOC.path}
-docs.commands = $$QMAKE_INSTALL_FILE $${QCHFILE} $(INSTALL_ROOT)$${docs.path}
+QMAKE_EXTRA_TARGETS += docs
+PRE_TARGETDEPS += docs
 
-QMAKE_EXTRA_TARGETS += qch_docs generate_docs
-INSTALLS += docs
+INSTALLS += docs_install
 
 OTHER_FILES += $${SAILFISH_QDOC.config}
