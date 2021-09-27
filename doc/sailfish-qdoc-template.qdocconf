@@ -18,7 +18,7 @@ qhp.SailfishQDocTemplate.filterAttributes = sailfish-qdoc-template 1.0
 
 HTML.footer += \
     "<div class=\"footer\">\n" \
-    "  <p><acronym title=\"Copyright\">&copy;</acronym> 2015 Jolla OY</p>" \
+    "  <p><acronym title=\"Copyright\">&copy;</acronym> 2021 Jolla Oy</p>" \
     "  <p>All other trademarks are property of their respective owners.</p>" \
     "  <p>" \
     "    This document may be used under the terms of the " \
