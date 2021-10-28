@@ -1,12 +1,12 @@
 TEMPLATE = aux
 
-MER_QDOC.project = mer-qdoc-template
-MER_QDOC.config = mer-qdoc-template.qdocconf
-MER_QDOC.style = offline
-MER_QDOC.path = /usr/share/doc/mer-qdoc-template
-MER_QDOC.template = $${PWD}/../config
+SAILFISH_QDOC.project = sailfish-qdoc-template
+SAILFISH_QDOC.config = sailfish-qdoc-template.qdocconf
+SAILFISH_QDOC.style = offline
+SAILFISH_QDOC.path = /usr/share/doc/sailfish-qdoc-template
+SAILFISH_QDOC.template = $${PWD}/../config
 
 OTHER_FILES = \
     src/index.qdoc
 
-include(../config/mer-qdoc-template.prf)
+include(../config/sailfish-qdoc-template.prf)

@@ -2,7 +2,7 @@
 \contentspage
 \page index.html
 
-\title Mer QDoc Documentation Template
+\title Sailfish QDoc Documentation Template
 
 This is a set of templates for generating a consistent set of API documentation across
 multiple projects.
@@ -12,12 +12,12 @@ multiple projects.
 In your \c qmake project add something like the following:
 
 \code
-CONFIG += mer-qdoc-template
+CONFIG += sailfish-qdoc-template
 
-MER_QDOC.project = example-project  # name of the generated qch file
-MER_QDOC.config = example-project.qdocconf
-MER_QDOC.style = offline
-MER_QDOC.path = <documentation installation path>
+SAILFISH_QDOC.project = example-project  # name of the generated qch file
+SAILFISH_QDOC.config = example-project.qdocconf
+SAILFISH_QDOC.style = offline
+SAILFISH_QDOC.path = <documentation installation path>
 \endcode
 
 Available documentation styles include:
@@ -67,7 +67,7 @@ sourcedirs += src ../src
 qhp.projects = ExampleProject
 
 qhp.ExampleProject.file = example-project.qhp
-qhp.ExampleProject.namespace = org.merproject.example-project.1.0
+qhp.ExampleProject.namespace = org.sailfishos.example-project.1.0
 qhp.ExampleProject.virtualFolder = example-project
 qhp.ExampleProject.indexTitle = Example Project Overview
 qhp.ExampleProject.indexRoot =

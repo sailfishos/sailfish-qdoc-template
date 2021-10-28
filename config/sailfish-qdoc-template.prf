@@ -1,0 +1,34 @@
+QDOC = $$[QT_INSTALL_BINS]/qdoc
+QHELPGENERATOR = $$[QT_INSTALL_BINS]/qhelpgenerator
+
+# Note: not $${QT_INSTALL_DOCS}/sailfish-qdoc-template
+# because the SDK prevents installation to /usr/share/doc/
+isEmpty(SAILFISH_QDOC.template):SAILFISH_QDOC.template=/usr/share/sailfish-qdoc-template
+isEmpty(SAILFISH_QDOC.style):SAILFISH_QDOC.style=offline
+
+QDOCCONF = $${SAILFISH_QDOC.template}/$${SAILFISH_QDOC.style}.qdocconf
+QHELPFILE = html/$${SAILFISH_QDOC.project}.qhp
+QCHFILE = $${SAILFISH_QDOC.project}.qch
+
+ENV += \
+    QT_VERSION=$${QT_MAJOR_VERSION}.$${QT_MINOR_VERSION} \
+    PROJECT_CONFIG=$${_PRO_FILE_PWD_}/$${SAILFISH_QDOC.config} \
+    BUILD_DIRECTORY=$${OUT_PWD} \
+    TEMPLATE=$${SAILFISH_QDOC.template}
+
+docs.input = ..
+docs.output = $${QCHFILE}
+docs.commands = (env $$ENV $$QDOC $$QDOCCONF) && \
+                ($${QHELPGENERATOR} $${QHELPFILE} -o $${QCHFILE})
+docs.CONFIG += no_check_exist no_default_install
+
+docs_install.files = $${QCHFILE}
+docs_install.path = $${SAILFISH_QDOC.path}
+docs_install.CONFIG += no_check_exist no_build
+
+QMAKE_EXTRA_TARGETS += docs
+PRE_TARGETDEPS += docs
+
+INSTALLS += docs_install
+
+OTHER_FILES += $${SAILFISH_QDOC.config}

@@ -1,10 +1,9 @@
-Name:       mer-qdoc-template
-Summary:    Mer Documentation QDoc templates
-Version:    0.0.0
+Name:       sailfish-qdoc-template
+Summary:    Sailfish Documentation QDoc templates
+Version:    0.1.0
 Release:    1
-Group:      System/Libraries
 License:    LGPLv2.1
-URL:        https://github.com/
+URL:        https://github.com/sailfishos/sailfish-qdoc-template
 Source0:    %{name}-%{version}.tar.bz2
 BuildRequires:  qt5-qmake
 BuildRequires:  qt5-tools
@@ -15,8 +14,7 @@ Requires:       qt5-qttools-qthelp-devel >= 5.2.0+git1
 %{summary}.
 
 %package doc
-Summary:    Mer Documentation QDoc templates documentation
-Group:      System/Libraries
+Summary:    Sailfish Documentation QDoc templates documentation
 
 %description doc
 %{summary}.
@@ -26,24 +24,22 @@ Group:      System/Libraries
 
 %build
 %qmake5
-make %{?jobs:-j%jobs}
-make docs %{?jobs:-j%jobs}
+%make_build
 
 %install
 rm -rf %{buildroot}
 %qmake5_install
-make install_docs INSTALL_ROOT=%{buildroot}
 
 %files
 %defattr(-,root,root,-)
 %dir %{_datadir}/%{name}
-%{_datadir}/qt5/mkspecs/features/mer-qdoc-template.prf
+%{_datadir}/qt5/mkspecs/features/sailfish-qdoc-template.prf
 %{_datadir}/%{name}/offline.qdocconf
 %{_datadir}/%{name}/common.qdocconf
 %{_datadir}/%{name}/fileextensions.qdocconf
 %{_datadir}/%{name}/qt-cpp-defines.qdocconf
-%{_datadir}/%{name}/mer-html-default-styles.qdocconf
-%{_datadir}/%{name}/mer-html-templates.qdocconf
+%{_datadir}/%{name}/sailfish-html-default-styles.qdocconf
+%{_datadir}/%{name}/sailfish-html-templates.qdocconf
 %{_datadir}/%{name}/images/breadcrumb.png
 %{_datadir}/%{name}/images/bullet_dn.png
 %{_datadir}/%{name}/images/bullet_gt.png
@@ -54,4 +50,4 @@ make install_docs INSTALL_ROOT=%{buildroot}
 %files doc
 %defattr(-,root,root,-)
 %dir %{_datadir}/doc/%{name}
-%{_datadir}/doc/%{name}/mer-qdoc-template.qch
+%{_datadir}/doc/%{name}/sailfish-qdoc-template.qch

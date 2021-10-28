@@ -1,4 +1,4 @@
-include(mer-html-default-styles.qdocconf)
+include(sailfish-html-default-styles.qdocconf)
 
 HTML.postheader = \
     "<div class=\"header\" id=\"qtdocheader\">\n" \
