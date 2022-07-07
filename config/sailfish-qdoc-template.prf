@@ -6,6 +6,10 @@ QHELPGENERATOR = $$[QT_INSTALL_BINS]/qhelpgenerator
 isEmpty(SAILFISH_QDOC.template):SAILFISH_QDOC.template=/usr/share/sailfish-qdoc-template
 isEmpty(SAILFISH_QDOC.style):SAILFISH_QDOC.style=offline
 
+# Main concern here is to ensure that $$dirname() use is not affected
+# by possible trailing slash
+SAILFISH_QDOC.path = $$clean_path($${SAILFISH_QDOC.path})
+
 QDOCCONF = $${SAILFISH_QDOC.template}/$${SAILFISH_QDOC.style}.qdocconf
 QHELPFILE = html/$${SAILFISH_QDOC.project}.qhp
 QCHFILE = $${SAILFISH_QDOC.project}.qch
@@ -18,7 +22,9 @@ ENV += \
 
 docs.input = ..
 docs.output = $${QCHFILE}
-docs.commands = (env $$ENV $$QDOC $$QDOCCONF) && \
+docs.commands = (env $$ENV $$QDOC $$QDOCCONF \
+                     -installdir $${SAILFISH_QDOC.path} \
+                     -indexdir $$dirname(SAILFISH_QDOC.path)) && \
                 ($${QHELPGENERATOR} $${QHELPFILE} -o $${QCHFILE})
 docs.CONFIG += no_check_exist no_default_install
 
