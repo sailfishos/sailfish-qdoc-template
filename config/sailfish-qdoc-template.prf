@@ -5,6 +5,7 @@ QHELPGENERATOR = $$[QT_INSTALL_BINS]/qhelpgenerator
 # because the SDK prevents installation to /usr/share/doc/
 isEmpty(SAILFISH_QDOC.template):SAILFISH_QDOC.template=/usr/share/sailfish-qdoc-template
 isEmpty(SAILFISH_QDOC.style):SAILFISH_QDOC.style=offline
+isEmpty(SAILFISH_QDOC.base_url):SAILFISH_QDOC.base_url=https://sailfishos.org/develop/docs
 
 # Main concern here is to ensure that $$dirname() use is not affected
 # by possible trailing slash
@@ -18,6 +19,7 @@ ENV += \
     QT_VERSION=$${QT_MAJOR_VERSION}.$${QT_MINOR_VERSION} \
     PROJECT_CONFIG=$${_PRO_FILE_PWD_}/$${SAILFISH_QDOC.config} \
     BUILD_DIRECTORY=$${OUT_PWD} \
+    BASE_URL=$${SAILFISH_QDOC.base_url} \
     TEMPLATE=$${SAILFISH_QDOC.template}
 
 docs.input = ..
