@@ -30,6 +30,9 @@ Summary:    Sailfish Documentation QDoc templates documentation
 rm -rf %{buildroot}
 %qmake5_install
 
+mkdir -p %{buildroot}/%{_docdir}/%{name}
+cp -R doc/html/* %{buildroot}/%{_docdir}/%{name}/
+
 %files
 %defattr(-,root,root,-)
 %dir %{_datadir}/%{name}
@@ -49,5 +52,5 @@ rm -rf %{buildroot}
 
 %files doc
 %defattr(-,root,root,-)
-%dir %{_datadir}/doc/%{name}
-%{_datadir}/doc/%{name}/sailfish-qdoc-template.qch
+%dir %{_docdir}/%{name}
+%{_docdir}/%{name}/*
