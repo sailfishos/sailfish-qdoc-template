@@ -76,8 +76,8 @@
 
     body
     {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
+        margin-left: 5px;
+        margin-right: 5px;
         font-family: sans-serif;
         line-height: normal
     }
@@ -250,7 +250,7 @@
     .header .breadcrumb
     {
         font-size: 90%;
-        padding: 0.5em 0 0.5em 1em;
+        padding: 5px 0 5px 10px;
         margin: 0;
         background-color: #fafafa;
         height: 1.35em;
